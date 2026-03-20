@@ -1,4 +1,4 @@
 /vendor/
 
-/database/*.db
+/src/database/*.db
 
