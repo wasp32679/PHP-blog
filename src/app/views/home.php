@@ -9,9 +9,9 @@
         Inkflow is where you write freely, publish instantly, and build an audience around the things you care about.
         Your first post is one click away.
     </p>
-    <button type="submit" class=" rounded-md bg-indigo-600 px-5 py-3 text-lg font-bold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+    <a href="/" class=" rounded-md bg-indigo-600 px-5 py-3 text-lg font-bold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
         Create your own post
-    </button>
+    </a>
 </div>
 
 <!--Posts-->
