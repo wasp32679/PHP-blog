@@ -23,7 +23,7 @@
 
             <!--Lead Para-->
             <p class="text-2xl md:text-3xl mb-5">
-                Welcome fellow <a class="text-white-800 hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://www.tailwindcss.com">Tailwind CSS</a> and <a class="text-white hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://www.ghost.org">Ghost</a> fan. This starter template is an attempt to replicate the default Ghost theme <a class="text-white-800 hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://demo.ghost.io/welcome">"Casper"</a> using Tailwind CSS and vanilla Javascript.
+                Welcome fellow <a class="text-white hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://www.tailwindcss.com">Tailwind CSS</a> and <a class="text-white hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://www.ghost.org">Ghost</a> fan. This starter template is an attempt to replicate the default Ghost theme <a class="text-white hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://demo.ghost.io/welcome">"Casper"</a> using Tailwind CSS and vanilla Javascript.
             </p>
 
             <p class="py-6">The basic blog page layout is available and all using the default Tailwind CSS classes (although there are a few hardcoded style tags). If you are going to use this in your project, you will want to convert the classes into components.</p>
@@ -61,11 +61,11 @@
         <!--Subscribe-->
         <div class="container font-sans bg-indigo-100 rounded mt-8 p-4 md:p-24 text-center">
             <h2 class="font-bold break-normal text-2xl md:text-4xl">Subscribe to Ghostwind CSS</h2>
-            <h3 class="font-bold break-normal text-white-600 text-base md:text-xl">Get the latest posts delivered right to your inbox</h3>
+            <h3 class="font-bold break-normal text-white text-base md:text-xl">Get the latest posts delivered right to your inbox</h3>
             <div class="w-full text-center pt-4">
                 <form action="#">
                     <div class="max-w-sm mx-auto p-1 pr-0 flex flex-wrap items-center">
-                        <input type="email" placeholder="youremail@example.com" class="flex-1 appearance-none rounded shadow p-3 text-white-600 mr-2 focus:outline-none">
+                        <input type="email" placeholder="youremail@example.com" class="flex-1 appearance-none rounded shadow p-3 text-white mr-2 focus:outline-none">
                         <button type="submit" class="flex-1 mt-4 md:mt-0 block md:inline-block appearance-none bg-indigo-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-indigo-400">Subscribe</button>
                     </div>
                 </form>
@@ -79,7 +79,7 @@
             <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
             <div class="flex-1">
                 <p class="text-base font-bold md:text-xl leading-none">Ghostwind CSS</p>
-                <p class="text-white-600 text-xs md:text-base">Tailwind CSS version of Ghost's Casper theme by <a class="text-white-800 hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+                <p class="text-white text-xs md:text-base">Tailwind CSS version of Ghost's Casper theme by <a class="text-white hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
             </div>
             <div class="justify-end">
 
