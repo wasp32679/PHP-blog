@@ -10,23 +10,23 @@
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-full">
-                            <label for="username" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Title</label>
+                            <label for="title" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Title</label>
                             <div class="mt-2">
                                 <div class="flex items-center rounded-md bg-gray-50 dark:bg-gray-900 pl-3 outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-600 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
-                                    <input type="text" name="username" id="username" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 dark:text-white bg-transparent placeholder:text-gray-400 dark:placeholder-gray-400 focus:outline-none sm:text-sm/6" placeholder="Enter post title...">
+                                    <input type="text" name="title" id="title" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 dark:text-white bg-transparent placeholder:text-gray-400 dark:placeholder-gray-400 focus:outline-none sm:text-sm/6" placeholder="Enter post title...">
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-span-full">
-                            <label for="about" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Content</label>
+                            <label for="content" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Content</label>
                             <div class="mt-2">
-                                <textarea name="about" id="about" rows="12" class="block w-full rounded-md bg-gray-50 border border-gray-300 text-gray-900 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white px-3 py-1.5 text-base  focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="Write your post content here..."></textarea>
+                                <textarea name="content" id="content" rows="12" class="block w-full rounded-md bg-gray-50 border border-gray-300 text-gray-900 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white px-3 py-1.5 text-base  focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="Write your post content here..."></textarea>
                             </div>
                         </div>
 
                         <div class="col-span-full">
-                            <label for="cover-photo" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Attachment</label>
+                            <label for="attachment" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Attachment</label>
                             <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 dark:border-gray-600 px-6 py-10">
                                 <div class="text-center">
                                     <svg class="mx-auto size-12 text-gray-300 dark:text-gray-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
