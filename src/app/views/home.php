@@ -21,7 +21,7 @@
 
             <li class="mb-6 md:md-0 col-span-12 sm:col-span-6  lg:col-span-4">
                 <a href="#">
-                    <img src="/mermaid-diagram-2026-03-30-083353.png" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="mermaid">
+                    <img src="https://placehold.co/600x400" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="placeholder">
                     <div class="flex items-center mb-3">
                         <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 font-display mr-2 capitalize bg-indigo-600">
                             News
@@ -38,7 +38,7 @@
 
             <li class="mb-6 md:md-0 col-span-12 sm:col-span-6 lg:col-span-4">
                 <a href="">
-                    <img src="/navigation (1).png" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow duration-500 ease-in-out group-hover:shadow-lg" alt="laravel-notification-event-subscriber-package2.jpg">
+                    <img src="https://placehold.co/600x400" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="placeholder">
                     <div class="flex items-center mb-3">
                         <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 font-display mr-2 capitalize bg-indigo-600">
                             Packages
@@ -55,7 +55,7 @@
 
             <li class="mb-6 md:md-0 col-span-12 sm:col-span-6 lg:col-span-4">
                 <a href="">
-                    <img src="" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow duration-500 ease-in-out group-hover:shadow-lg" alt="otp.png">
+                    <img src="https://placehold.co/600x400" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="placeholder">
                     <div class="flex items-center mb-3">
                         <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 font-display mr-2 capitalize bg-indigo-600">
                             Tutorials
@@ -72,7 +72,7 @@
 
             <li class="mb-6 md:md-0 col-span-12 sm:col-span-6 lg:col-span-4">
                 <a href="">
-                    <img src="" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow duration-500 ease-in-out group-hover:shadow-lg" alt="laravel-scout-featured.png">
+                    <img src="https://placehold.co/600x400" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="placeholder">
                     <div class="flex items-center mb-3">
                         <p class="font-mono text-xs font-normal opacity-75 ">September 22nd, 2022</p>
                     </div>
@@ -86,7 +86,7 @@
 
             <li class="mb-6 md:md-0 col-span-12 sm:col-span-6 lg:col-span-4">
                 <a href="#">
-                    <img src="" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow duration-500 ease-in-out group-hover:shadow-lg" alt="livewire-v3.jpg">
+                    <img src="https://placehold.co/600x400" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="placeholder">
                     <div class="flex items-center mb-3">
                         <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 font-display mr-2 capitalize bg-indigo-600">
                             News
@@ -103,7 +103,7 @@
 
             <li class="mb-6 md:md-0 col-span-12 sm:col-span-6 lg:col-span-4">
                 <a href="#">
-                    <img src="" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow duration-500 ease-in-out group-hover:shadow-lg" alt="laravel9-1646792144.jpg">
+                    <img src="https://placehold.co/600x400" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="placeholder">
                     <div class="flex items-center mb-3">
                         <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 font-display mr-2 capitalize bg-indigo-600">
                             News

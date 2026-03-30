@@ -8,4 +8,4 @@ define('ROOT', dirname(__DIR__));
 
 $db = Database::getConnexion();
 
-require_once ROOT . '/src/app/views/posts/createpost.php';
+require_once ROOT . '/src/app/views/home.php';
