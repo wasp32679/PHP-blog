@@ -3,7 +3,7 @@
         <div class="container px-4 mx-auto">
             <div class="-mx-4 flex flex-wrap justify-between">
                 <div class="px-4 my-4 w-full xl:w-1/5">
-                    <a href="/" class="block w-56 mb">
+                    <a href="/" class="block w-56">
                         <h2 class="inline-block font-bold text-2xl pb-4 mb-4 border-b-4 border-indigo-600">Inkflow</h2>
                     </a>
                     <p>
