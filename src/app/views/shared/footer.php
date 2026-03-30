@@ -1,5 +1,3 @@
-<?php require_once ROOT . "/src/app/views/shared/header.php"; ?>
-
 <footer>
     <div class="bg-gray-900 py-4 text-white">
         <div class="container px-4 mx-auto">

@@ -1,5 +1,3 @@
-<?php require_once ROOT . "/src/app/views/shared/header.php"; ?>
-
 <nav class="bg-gray-900 p-4 mt-0 w-full">
     <div class="container mx-auto flex items-center">
         <div class="flex text-white font-extrabold">
