@@ -6,3 +6,5 @@
 
 /src/database/*.db
 
+/public/uploads
+

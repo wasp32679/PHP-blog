@@ -1,6 +1,6 @@
 <?php
 
-namespace Ryan\PhpBlog\Config;
+namespace Ryan\PhpBlog\config;
 
 use PDO;
 
@@ -8,9 +8,7 @@ class Database
 {
     private static ?PDO $instance = null;
 
-    private function __construct()
-    {
-    }
+    private function __construct() {}
 
     public static function getConnexion(): PDO
     {

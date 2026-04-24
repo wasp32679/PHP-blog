@@ -1,5 +1,5 @@
-<?php require_once ROOT . "/src/app/views/shared/header.php"; ?>
-<?php require_once ROOT . "/src/app/views/shared/navbar.php"; ?>
+<?php require_once ROOT . "/src/views/shared/header.php"; ?>
+<?php require_once ROOT . "/src/views/shared/navbar.php"; ?>
 
 
 <!--Title-->
@@ -95,4 +95,4 @@
 
 
 
-<?php require_once ROOT . "/src/app/views/shared/footer.php"; ?>
+<?php require_once ROOT . "/src/views/shared/footer.php"; ?>

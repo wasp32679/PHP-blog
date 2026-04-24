@@ -1,4 +1,4 @@
-<?php require_once ROOT . "/src/app/views/shared/header.php"; ?>
+<?php require_once ROOT . "/src/views/shared/header.php"; ?>
 
 <section class="bg-gray-50 dark:bg-gray-800 ">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
