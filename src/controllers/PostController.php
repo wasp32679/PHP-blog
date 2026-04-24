@@ -37,15 +37,14 @@ class PostController
                 return;
             }
 
-            $fileName  = basename($file['name']);
+            $fileName  = uniqid('post_', true) . '_' . basename($file['name']);
             $dest      = ROOT . "/public/uploads/" . $fileName;
             move_uploaded_file($file['tmp_name'], $dest);
-            $imagePath = "/uploads/" . uniqid('post_', true) . $fileName;
+            $imagePath = "/uploads/" . $fileName;
 
             PostModel::createPost($title, $imagePath, $content);
             $message = "Post successfully created!";
             self::showCreateForm($message);
-            header('Location: /posts/create');
             exit;
         }
     }
