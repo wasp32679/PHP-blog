@@ -1,5 +1,5 @@
-<?php require_once ROOT . "/src/app/views/shared/header.php"; ?>
-<?php require_once ROOT . "/src/app/views/shared/navbar.php"; ?>
+<?php require_once ROOT . "/src/views/shared/header.php"; ?>
+<?php require_once ROOT . "/src/views/shared/navbar.php"; ?>
 
 <div class="min-h-screen flex items-start md:items-center justify-center md:p-8">
     <div class="w-full md:max-w-6xl md:bg-gray-900 md:rounded-2xl md:border md:border-gray-700 md:shadow-lg">
@@ -47,12 +47,18 @@
                 </div>
 
                 <div class="mt-6 mx-4 flex items-center justify-end gap-x-6 p-5">
-                    <button type="button" class="w-24 text-sm/6 font-semibold text-gray-900 dark:text-white">Cancel</button>
-                    <button type="submit" class="w-24 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create</button>
+                    <button type="button" class="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600  focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600">
+                        <svg class="w-5 h-5 mr-1 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                        Delete
+                    </button>
+                    <button type="submit" class="w-24 rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
+</div>
 
-<?php require_once ROOT . "/src/app/views/shared/footer.php"; ?>
+<?php require_once ROOT . "/src/views/shared/footer.php"; ?>

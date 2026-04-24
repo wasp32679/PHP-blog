@@ -2,10 +2,22 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use Ryan\PhpBlog\Config\Database;
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+use Ryan\PhpBlog\config\Database;
+use Ryan\PhpBlog\controllers\PostController;
 
 define('ROOT', dirname(__DIR__));
 
 $db = Database::getConnexion();
 
-require_once ROOT . '/src/app/views/home.php';
+$uri    = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$method = $_SERVER['REQUEST_METHOD'];
+
+// create  
+if ($uri === '/posts/create' && $method === 'GET') {
+    PostController::showCreateForm();
+} elseif ($uri === '/posts/create' && $method === 'POST') {
+    PostController::create();
+}
