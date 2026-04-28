@@ -9,9 +9,9 @@ use PDO;
 class PostModel
 {
     /**
-     * @param [type] $title
-     * @param [type] $image
-     * @param [type] $content
+     * @param string $title
+     * @param string $image
+     * @param string $content
      * @return void
      */
     public static function createPost($title, $image, $content): void
