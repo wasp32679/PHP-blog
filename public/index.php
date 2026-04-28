@@ -20,6 +20,6 @@ if ($uri === '/posts/create' && $method === 'GET') {
     PostController::showCreateForm();
 } elseif ($uri === '/posts/create' && $method === 'POST') {
     PostController::create();
-} elseif ($uri === '/' || $uri === '/home' && $method === 'GET') {
+} elseif (($uri === '/' || $uri === '/home') && $method === 'GET') {
     PostController::displayPosts();
 }

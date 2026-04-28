@@ -24,7 +24,7 @@ class PostModel
     /**
      * @return Post[] 
      */
-    public static function getAllPost(): array
+    public static function getAllPosts(): array
     {
         $pdo = Database::getConnexion();
         $stmt = $pdo->query("select * from posts order by created_at desc");

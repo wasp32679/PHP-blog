@@ -51,7 +51,7 @@ class PostController
 
     public static function displayPosts(): void
     {
-        $posts = PostModel::getAllPost();
+        $posts = PostModel::getAllPosts();
         require ROOT . '/src/views/home.php';
     }
 }
