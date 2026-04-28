@@ -23,7 +23,7 @@
                     <a class="inline-block py-2 px-2 text-white no-underline" href="/">HOME</a>
                 </li>
                 <li class="mr-2">
-                    <a class="inline-block text-indigo-200 no-underline hover:text-gray-100 hover:text-underline py-2 px-2" href="#">Create post</a>
+                    <a class="inline-block text-indigo-200 no-underline hover:text-gray-100 hover:text-underline py-2 px-2" href="/posts/create">Create post</a>
                 </li>
                 <li class="mr-2">
                     <a class="inline-block text-indigo-200 no-underline hover:text-indigo-100 hover:text-underline py-2 px-2" href="#">All posts</a>
