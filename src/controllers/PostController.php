@@ -48,4 +48,10 @@ class PostController
             exit;
         }
     }
+
+    public static function displayPosts(): void
+    {
+        $posts = PostModel::getAllPost();
+        require ROOT . '/src/views/home.php';
+    }
 }
