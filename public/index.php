@@ -21,3 +21,7 @@ if ($uri === '/posts/create' && $method === 'GET') {
 } elseif ($uri === '/posts/create' && $method === 'POST') {
     PostController::create();
 }
+
+if ($uri === "/home" && $method === "GET") {
+    require ROOT . '/src/views/home.php';
+}

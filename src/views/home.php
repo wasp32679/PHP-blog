@@ -9,7 +9,7 @@
         Inkflow is where you write freely, publish instantly, and build an audience around the things you care about.
         Your first post is one click away.
     </p>
-    <a href="/" class=" rounded-md bg-indigo-600 px-5 py-3 text-lg font-bold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+    <a href="/posts/create" class=" rounded-md bg-indigo-600 px-5 py-3 text-lg font-bold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
         Create your own post
     </a>
 </div>
@@ -103,7 +103,7 @@
 
             <li class="mb-6 md:md-0 col-span-12 sm:col-span-6 lg:col-span-4">
                 <a href="#">
-                    <img src="https://placehold.co/600x400" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="placeholder">
+                    <img src="https://placehold.co/600x600" class="w-full h-80 object-cover mb-4 rounded-lg shadow-none transition-shadow  duration-500 ease-in-out group-hover:shadow-lg" alt="placeholder">
                     <div class="flex items-center mb-3">
                         <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 font-display mr-2 capitalize bg-indigo-600">
                             News
