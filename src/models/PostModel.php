@@ -30,4 +30,31 @@ class PostModel
         $stmt = $pdo->query("select * from posts order by created_at desc");
         return $stmt->fetchAll(PDO::FETCH_CLASS, Post::class);
     }
+
+    /**
+     * @param int $id
+     * @return Post
+     */
+    public static function getPostById(int $id): Post
+    {
+        $pdo = Database::getConnexion();
+        $stmt = $pdo->prepare("select * from posts where id = ?");
+        $stmt->execute([$id]);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Post::class);
+        return $stmt->fetch();
+    }
+
+    /**
+     * @param string $title
+     * @param string $image
+     * @param string $content
+     * @param int    $id
+     * @return void
+     */
+    public static function editPost($title, $image, $content, $id): void
+    {
+        $pdo = Database::getConnexion();
+        $stmt = $pdo->prepare("update posts set title=?, image=?, content=? where id=?");
+        $stmt->execute([$title, $image, $content, $id]);
+    }
 }
