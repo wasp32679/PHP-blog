@@ -5,7 +5,6 @@
 /** @var \Ryan\PhpBlog\models\Post[] $posts */
 ?>
 
-<!--Hero-->
 <div class="flex flex-col py-40 items-center text-white">
     <h1 class="mb-4  text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">Welcome to Inkflow</h1>
     <p class="max-w-5xl text-center mb-6 text-lg font-normal text-body lg:text-xl sm:px-16 xl:px-48">
@@ -18,10 +17,9 @@
     </a>
 </div>
 
-<!--Posts-->
 <div class="bg-gray-900">
-    <div class="max-w-screen-2xl rounded-xl text-white lg:py-32 grid grid-cols-12 my-20 py-16 mx-auto">
-        <ul class="lg:gap-16 sm:gap-8 grid grid-cols-12 col-span-10 col-start-2 gap-6">
+    <div class="max-w-screen-4xl rounded-xl text-white lg:py-32 grid grid-cols-16 my-20 py-16 mx-auto">
+        <ul class="lg:gap-8 sm:gap-8 grid grid-cols-16 col-span-10 col-start-4 gap-6">
 
             <?php foreach ($posts as $post): ?>
                 <li class="mb-6 md:md-0 col-span-12 sm:col-span-6 lg:col-span-4 border-3 border-gray-800 rounded-xl">
