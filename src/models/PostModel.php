@@ -35,13 +35,14 @@ class PostModel
      * @param int $id
      * @return Post
      */
-    public static function getPostById(int $id): Post
+    public static function getPostById(int $id): ?Post
     {
         $pdo = Database::getConnexion();
         $stmt = $pdo->prepare("select * from posts where id = ?");
         $stmt->execute([$id]);
         $stmt->setFetchMode(PDO::FETCH_CLASS, Post::class);
-        return $stmt->fetch();
+        $post = $stmt->fetch();
+        return $post ?: null;
     }
 
     /**

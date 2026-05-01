@@ -71,12 +71,20 @@ class PostController
     public static function showEditForm(int $id, string $message = ''): void
     {
         $post = PostModel::getPostById($id);
+        if ($post === null) {
+            header('Location: /');
+            exit;
+        }
         require ROOT . '/src/views/posts/editpost.php';
     }
 
     public static function updatePost(int $id): void
     {
         $post = PostModel::getPostById($id);
+        if ($post === null) {
+            header('Location: /');
+            exit;
+        }
         $title   = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS) ?? $post->title;
         $content = html_entity_decode(filter_input(INPUT_POST, 'content', FILTER_SANITIZE_SPECIAL_CHARS) ?? $post->content);
         $message = '';
