@@ -36,8 +36,8 @@ class PostController
 
     public static function create(): void
     {
-        $title   = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS) ?? '';
-        $content = html_entity_decode(filter_input(INPUT_POST, 'content', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
+        $title = filter_var($_POST['title'] ?? '');
+        $content = filter_var($_POST['content'] ?? '');
         $file    = $_FILES['image'] ?? null;
         $message = '';
 
@@ -85,8 +85,8 @@ class PostController
             header('Location: /');
             exit;
         }
-        $title   = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS) ?? $post->title;
-        $content = html_entity_decode(filter_input(INPUT_POST, 'content', FILTER_SANITIZE_SPECIAL_CHARS) ?? $post->content);
+        $title = filter_var($_POST['title'] ?? $post->title);
+        $content = filter_var($_POST['content'] ?? $post->content);
         $message = '';
 
         if (empty($title) || empty($content)) {
