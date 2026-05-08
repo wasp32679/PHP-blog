@@ -1,4 +1,7 @@
-<?php require_once ROOT . "/src/views/shared/header.php"; ?>
+<?php
+http_response_code(404);
+require_once ROOT . "/src/views/shared/header.php";
+?>
 
 <div class="flex flex-col min-h-screen justify-center items-center">
     <h1 class="text-[120px] font-extrabold text-white">404</h1>
