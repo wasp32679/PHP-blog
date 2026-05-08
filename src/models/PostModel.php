@@ -14,7 +14,7 @@ class PostModel
      * @param string $content
      * @return void
      */
-    public static function createPost($title, $image, $content): void
+    public static function createPost(string $title, string $image, string $content): void
     {
         $pdo = Database::getConnexion();
         $stmt = $pdo->prepare("insert into posts (title, image, content, user_id) values (?, ?, ?, ?)");
@@ -52,7 +52,7 @@ class PostModel
      * @param int    $id
      * @return void
      */
-    public static function editPost($title, $image, $content, $id): void
+    public static function editPost(string $title, string $image, string $content, int $id): void
     {
         $pdo = Database::getConnexion();
         $stmt = $pdo->prepare("update posts set title=?, image=?, content=? where id=?");
