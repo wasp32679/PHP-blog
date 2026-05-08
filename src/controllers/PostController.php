@@ -68,11 +68,21 @@ class PostController
         require ROOT . '/src/views/home.php';
     }
 
+    public static function displayPostById(int $id): void
+    {
+        $post = PostModel::getPostById($id);
+        if ($post === null) {
+            require ROOT . '/src/views/err404.php';
+            exit;
+        }
+        require ROOT . '/src/views/posts/detailpost.php';
+    }
+
     public static function showEditForm(int $id, string $message = ''): void
     {
         $post = PostModel::getPostById($id);
         if ($post === null) {
-            header('Location: /');
+            require ROOT . '/src/views/err404.php';
             exit;
         }
         require ROOT . '/src/views/posts/editpost.php';
@@ -82,7 +92,7 @@ class PostController
     {
         $post = PostModel::getPostById($id);
         if ($post === null) {
-            header('Location: /');
+            require ROOT . '/src/views/err404.php';
             exit;
         }
         $title = filter_var($_POST['title'] ?? $post->title);
