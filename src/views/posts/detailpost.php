@@ -20,7 +20,7 @@
 <!--image-->
 <div class="container w-full max-w-6xl mx-auto mt-8 mb-16 rounded overflow-hidden">
     <img
-        src="<?= $post->image ?>"
+        src="<?= htmlspecialchars($post->image, ENT_QUOTES, 'UTF-8') ?>"
         alt="<?= htmlspecialchars($post->title, ENT_QUOTES, 'UTF-8') ?>"
         class="w-full max-h-[75vh] object-contain"
         style="background-color:#111;" />
