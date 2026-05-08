@@ -12,13 +12,14 @@ class PostModel
      * @param string $title
      * @param string $image
      * @param string $content
-     * @return void
+     * @return int
      */
-    public static function createPost(string $title, string $image, string $content): void
+    public static function createPost(string $title, string $image, string $content): int
     {
         $pdo = Database::getConnexion();
         $stmt = $pdo->prepare("insert into posts (title, image, content, user_id) values (?, ?, ?, ?)");
         $stmt->execute([$title, $image, $content, 1]);
+        return (int) $pdo->lastInsertId();
     }
 
     /**

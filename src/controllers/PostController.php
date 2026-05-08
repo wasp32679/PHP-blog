@@ -54,9 +54,9 @@ class PostController
             self::showCreateForm($message);
         } else {
 
-            PostModel::createPost($title, $imagePath, $content);
+            $postId = PostModel::createPost($title, $imagePath, $content);
             $message = "Post successfully created!";
-            self::showCreateForm($message);
+            header("Location: /posts/$postId");
             exit;
         }
     }
@@ -120,6 +120,6 @@ class PostController
         if ($title !== $post->title || $content !== $post->content || $hasNewFile) {
             $message = "Post successfully updated!";
         }
-        self::showEditForm($id, $message);
+        header("Location: /posts/$id");
     }
 }
