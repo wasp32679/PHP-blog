@@ -14,7 +14,7 @@
     </div>
     <p class="text-sm md:text-base text-indigo-500 font-bold"><?= date('d F Y', strtotime($post->created_at)) ?>
     </p>
-    <h1 class="text-white font-bold break-normal text-3xl md:text-5xl"><?= $post->title ?></h1>
+    <h1 class="text-white font-bold break-normal text-3xl md:text-5xl"><?= htmlspecialchars($post->title, ENT_QUOTES, 'UTF-8') ?></h1>
 </div>
 
 <!--image-->
@@ -33,7 +33,7 @@
 
         <!--Content-->
         <div class=" w-full p-8 md:p-24 text-xl md:text-2xl text-white leading-normal" style="font-family:Georgia,serif;">
-            <p class="wrap-break-words whitespace-pre-line"><?= $post->content ?></p>
+            <p class="wrap-break-words whitespace-pre-line"><?= htmlspecialchars($post->content, ENT_QUOTES, 'UTF-8') ?></p>
         </div>
 
         <!--Author-->
