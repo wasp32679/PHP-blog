@@ -14,7 +14,7 @@ class PostModel
      * @param string $content
      * @return void
      */
-    public static function createPost($title, $image, $content): void
+    public static function createPost(string $title, string $image, string $content): void
     {
         $pdo = Database::getConnexion();
         $stmt = $pdo->prepare("insert into posts (title, image, content, user_id) values (?, ?, ?, ?)");
@@ -29,5 +29,33 @@ class PostModel
         $pdo = Database::getConnexion();
         $stmt = $pdo->query("select * from posts order by created_at desc");
         return $stmt->fetchAll(PDO::FETCH_CLASS, Post::class);
+    }
+
+    /**
+     * @param int $id
+     * @return Post
+     */
+    public static function getPostById(int $id): ?Post
+    {
+        $pdo = Database::getConnexion();
+        $stmt = $pdo->prepare("select * from posts where id = ?");
+        $stmt->execute([$id]);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Post::class);
+        $post = $stmt->fetch();
+        return $post ?: null;
+    }
+
+    /**
+     * @param string $title
+     * @param string $image
+     * @param string $content
+     * @param int    $id
+     * @return void
+     */
+    public static function editPost(string $title, string $image, string $content, int $id): void
+    {
+        $pdo = Database::getConnexion();
+        $stmt = $pdo->prepare("update posts set title=?, image=?, content=? where id=?");
+        $stmt->execute([$title, $image, $content, $id]);
     }
 }
