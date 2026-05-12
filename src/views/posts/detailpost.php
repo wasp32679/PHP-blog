@@ -33,7 +33,7 @@
 
         <!--Content-->
         <div class=" w-full p-8 md:p-24 text-xl md:text-2xl text-white leading-normal" style="font-family:Georgia,serif;">
-            <p class="wrap-break-words whitespace-pre-line"><?= htmlspecialchars($post->content, ENT_QUOTES, 'UTF-8') ?></p>
+            <p class="break-all whitespace-pre-line"><?= htmlspecialchars($post->content, ENT_QUOTES, 'UTF-8') ?></p>
         </div>
 
         <!--Author-->
