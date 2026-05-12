@@ -27,4 +27,7 @@ if ($uri === '/posts/create' && $method === 'GET') {
 } elseif ((preg_match('#^/posts/edit/(\d+)$#', $uri, $matches)) && $method === 'POST') {
     $id = (int) $matches[1];
     PostController::updatePost($id);
+} elseif ((preg_match('#^/posts/(\d+)$#', $uri, $matches)) && $method === 'GET') {
+    $id = (int) $matches[1];
+    PostController::displayPostById($id);
 }
