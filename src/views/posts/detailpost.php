@@ -41,7 +41,6 @@
             <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
             <div class="flex-1">
                 <p class="text-base font-bold md:text-xl leading-none">Ghostwind CSS</p>
-                <p class="text-white text-xs md:text-base">Tailwind CSS version of Ghost's Casper theme by <a class="text-white hover:text-indigo-500 no-underline border-b-2 border-indigo-500" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
             </div>
             <div class="justify-end">
 
