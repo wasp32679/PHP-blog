@@ -6,15 +6,15 @@ use Ryan\PhpBlog\models\PostModel;
 
 class PostController
 {
-    public static function showCreateForm(string $message = ''): void
+    public static function showCreateForm(array $errors = []): void
     {
         require ROOT . '/src/views/posts/createpost.php';
     }
 
-    private static function handleImage(array $file, string &$message): ?string
+    private static function handleImage(array $file, array &$errors): ?string
     {
         if ($file['size'] > 10 * 1024 * 1024) {
-            $message = "The max file size is 10MB.";
+            $errors['file'] = "The max file size is 10MB.";
             return null;
         } else {
             $allowedMimes = ['image/jpeg', 'image/png', 'image/gif'];
@@ -22,7 +22,7 @@ class PostController
             $realMimeType = $finfo->file($file['tmp_name']);
 
             if (!in_array($realMimeType, $allowedMimes)) {
-                $message = "Invalid file type.";
+                $errors['file'] = "Invalid file type.";
                 return null;
             }
 
@@ -39,26 +39,31 @@ class PostController
         $title = filter_var($_POST['title'] ?? '');
         $content = filter_var($_POST['content'] ?? '');
         $file    = $_FILES['image'] ?? null;
-        $message = '';
+        $errors = [];
 
         if (empty($title) || empty($content)) {
-            $message = "Title and content are required.";
-            self::showCreateForm($message);
-        } else if (empty($file) || $file['size'] === 0) {
-            $message = "Put a valid image.";
-            self::showCreateForm($message);
+            $errors['text'] = "Title and content are required.";
         }
-        $imagePath = self::handleImage($file, $message);
+
+        if (empty($file) || $file['size'] === 0) {
+            $errors['file'] = "Put a valid image.";
+        }
+
+        if (!empty($errors)) {
+            self::showCreateForm($errors);
+            return;
+        }
+
+        $imagePath = self::handleImage($file, $errors);
 
         if ($imagePath === null) {
-            self::showCreateForm($message);
-        } else {
-
-            $postId = PostModel::createPost($title, $imagePath, $content);
-            $message = "Post successfully created!";
-            header("Location: /posts/$postId");
-            exit;
+            self::showCreateForm($errors);
+            return;
         }
+
+        $postId = PostModel::createPost($title, $imagePath, $content);
+        header("Location: /posts/$postId");
+        exit;
     }
 
 
@@ -78,7 +83,7 @@ class PostController
         require ROOT . '/src/views/posts/detailpost.php';
     }
 
-    public static function showEditForm(int $id, string $message = ''): void
+    public static function showEditForm(int $id, array $errors = []): void
     {
         $post = PostModel::getPostById($id);
         if ($post === null) {
@@ -95,31 +100,37 @@ class PostController
             require ROOT . '/src/views/err404.php';
             exit;
         }
-        $title = filter_var($_POST['title'] ?? $post->title);
-        $content = filter_var($_POST['content'] ?? $post->content);
-        $message = '';
+        $title = trim($_POST['title'] ?? $post->title);
+        $content = trim($_POST['content'] ?? $post->content);
+        $errors = [];
 
         if (empty($title) || empty($content)) {
-            $message = "Title and content are required.";
-            self::showEditForm($id, $message);
+            $errors['title'] = "Title and content are required.";
         }
 
         $file    = $_FILES['image'] ?? null;
         $hasNewFile = $file && $file['size'] > 0;
         if ($hasNewFile) {
-            $imagePath = self::handleImage($file, $message);
+            $imagePath = self::handleImage($file, $errors);
             if ($imagePath === null) {
-                self::showEditForm($id, $message);
+                self::showEditForm($id, $errors);
                 return;
             }
         } else {
             $imagePath = $post->image;
         }
 
-        PostModel::editPost($title, $imagePath, $content, $id);
-        if ($title !== $post->title || $content !== $post->content || $hasNewFile) {
-            $message = "Post successfully updated!";
+        if (!empty($errors)) {
+            self::showEditForm($id, $errors);
+            return;
         }
+
+        PostModel::editPost($title, $imagePath, $content, $id);
+        // for future possible confirmation msg
+        //        if ($title !== $post->title || $content !== $post->content || $hasNewFile) {
+        //          $message = "Post successfully updated!";
+        //    }
         header("Location: /posts/$id");
+        exit;
     }
 }
