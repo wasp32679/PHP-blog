@@ -4,8 +4,8 @@ namespace Ryan\PhpBlog\models;
 
 class User
 {
-    public int $id;
-    public string $name;
-    public string $email;
-    public string $password;
+    public readonly int $id;
+    public readonly string $name;
+    public readonly string $email;
+    public readonly string $password;
 }
