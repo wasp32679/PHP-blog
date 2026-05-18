@@ -1,7 +1,7 @@
 <nav class="bg-gray-900 p-4 mt-0 w-full">
-    <div class="container mx-auto flex items-center">
+    <div class="container flex mx-auto items-center">
         <div class="flex text-white font-extrabold">
-            <a class="flex items-center text-white text-base no-underline hover:text-white hover:no-underline" href="/">
+            <a class="flex items-center text-white text-base no-underline hover:text-white hover:no-underline">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <!-- Corps de la plume -->
                     <path d="M12 2 L8 13 Q8 17 12 18 Q16 17 16 13 Z" opacity="0.9" />
@@ -18,7 +18,7 @@
             </a>
         </div>
         <div class="flex pl-4 text-sm">
-            <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+            <ul class="list-reset flex flex-1 md:flex-none items-center">
                 <li class="mr-2">
                     <a class="inline-block py-2 px-2 text-white no-underline" href="/">HOME</a>
                 </li>
@@ -26,6 +26,14 @@
                     <a class="inline-block text-indigo-200 no-underline hover:text-gray-100 hover:text-underline py-2 px-2" href="/posts/create">Create post</a>
                 </li>
             </ul>
+        </div>
+        <div class="flex items-center gap-3 ml-auto">
+            <a href="/login" class="px-4 py-2 text-sm font-medium text-white rounded-lg hover:bg-indigo-500 transition-colors duration-200">
+                Sign in
+            </a>
+            <a href="/register" class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-200">
+                Sign up
+            </a>
         </div>
     </div>
 </nav>
