@@ -23,6 +23,7 @@ class UserController
         $name     = trim($_POST['name'] ?? '');
         $email    = trim($_POST['email'] ?? '');
         $password = $_POST['password'] ?? '';
+        $pattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/";
         $errors   = [];
 
         if (empty($name)) {
@@ -39,8 +40,8 @@ class UserController
 
         if (empty($password)) {
             $errors['password'] = "Password is required.";
-        } elseif (strlen($password) < 8) {
-            $errors['password'] = "Password must be at least 8 characters.";
+        } elseif (!preg_match($pattern, $password)) {
+            $errors['password'] = "Password must be at least 8 characters, contains an uppercase, a lowercase and a number.";
         } elseif (strlen($password) > 72) {
             $errors['password'] = "Password cannot exceed 72 characters.";
         }
