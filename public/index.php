@@ -7,6 +7,8 @@ error_reporting(E_ALL);
 
 use Ryan\PhpBlog\config\Database;
 use Ryan\PhpBlog\controllers\PostController;
+use Ryan\PhpBlog\controllers\UserController;
+
 
 define('ROOT', dirname(__DIR__));
 
@@ -30,4 +32,8 @@ if ($uri === '/posts/create' && $method === 'GET') {
 } elseif ((preg_match('#^/posts/(\d+)$#', $uri, $matches)) && $method === 'GET') {
     $id = (int) $matches[1];
     PostController::displayPostById($id);
+} elseif ($uri === '/register' && $method === 'GET') {
+    UserController::showRegisterForm();
+} elseif ($uri === '/register' && $method === 'POST') {
+    UserController::createUser();
 }

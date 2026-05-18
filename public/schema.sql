@@ -2,7 +2,7 @@ create table users (
     id integer primary key autoincrement,
     name varchar(30) not null check (length(name) <= 30),
     email text not null unique,
-    password text not null
+    password varchar(255) not null
 );
 
 create table posts (
