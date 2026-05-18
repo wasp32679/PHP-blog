@@ -32,8 +32,8 @@ if ($uri === '/posts/create' && $method === 'GET') {
 } elseif ((preg_match('#^/posts/(\d+)$#', $uri, $matches)) && $method === 'GET') {
     $id = (int) $matches[1];
     PostController::displayPostById($id);
-} else if ($uri === '/register' && $method === 'GET') {
+} elseif ($uri === '/register' && $method === 'GET') {
     UserController::showRegisterForm();
-} else if ($uri === '/register' && $method === 'POST') {
+} elseif ($uri === '/register' && $method === 'POST') {
     UserController::createUser();
 }

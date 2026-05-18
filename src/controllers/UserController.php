@@ -58,7 +58,7 @@ class UserController
         try {
             $hash = password_hash($password, PASSWORD_BCRYPT);
             UserModel::createUser($name, $email, $hash);
-            header("Location: /login.php");
+            header("Location: /login");
             exit;
         } catch (PDOException $e) {
             if (str_contains($e->getMessage(), 'UNIQUE')) {
