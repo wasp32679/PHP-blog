@@ -7,8 +7,8 @@
 
 <!--Title-->
 <div class="text-center pt-16 md:pt-32">
-    <div class="absolute top-22 right-4 md:right-8">
-        <a href="/posts/edit/<?= $post->id ?>" class="px-8 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xl font-bold rounded-lg transition-colors">
+    <div class="absolute top-22 right-9">
+        <a href="/posts/edit/<?= $post->id ?>" class="px-6.75 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-colors">
             Edit
         </a>
     </div>
@@ -33,7 +33,7 @@
 
         <!--Content-->
         <div class=" w-full p-8 md:p-24 text-xl md:text-2xl text-white leading-normal" style="font-family:Georgia,serif;">
-            <p class="break-all whitespace-pre-line"><?= htmlspecialchars($post->content, ENT_QUOTES, 'UTF-8') ?></p>
+            <p class="wrap-break-word whitespace-pre-line"><?= htmlspecialchars($post->content, ENT_QUOTES, 'UTF-8') ?></p>
         </div>
 
         <!--Author-->
