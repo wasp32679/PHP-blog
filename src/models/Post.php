@@ -4,10 +4,10 @@ namespace Ryan\PhpBlog\models;
 
 class Post
 {
-    public int $id;
-    public string $title;
-    public string $image;
-    public string $content;
-    public string $created_at;
-    public int $user_id;
+    public readonly int $id;
+    public readonly string $title;
+    public readonly string $image;
+    public readonly string $content;
+    public readonly string $created_at;
+    public readonly int $user_id;
 }

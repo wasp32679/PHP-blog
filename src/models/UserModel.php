@@ -3,14 +3,19 @@
 namespace Ryan\PhpBlog\models;
 
 use Ryan\PhpBlog\config\Database;
-use PDO;
 
 class UserModel
 {
-    public static function createUser(string $name, string $email, string $hash)
+    /**
+     * @param string $name
+     * @param string $email
+     * @param string $hash
+     * @return void
+     */
+    public static function createUser(string $name, string $email, string $hash): void
     {
         $pdo = Database::getConnexion();
-        $stmt = $pdo->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+        $stmt = $pdo->prepare("insert into users (name, email, password) values (?, ?, ?)");
         $stmt->execute([$name, $email, $hash]);
     }
 }
