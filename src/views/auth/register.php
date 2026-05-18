@@ -29,7 +29,8 @@
                 ] as [$type, $id, $label, $value]
             ): ?>
                 <div class="relative">
-                    <input type="<?= $type ?>" name="<?= $id ?>" id="<?= $id ?>" placeholder=" " value="<?= $value ?>"
+                    <input type="<?= $type ?>" name="<?= $id ?>" id="<?= $id ?>" placeholder=" "
+                        value="<?= htmlspecialchars($value) ?>"
                         class="peer block w-full py-4 px-0 bg-transparent border-0 border-b-2 <?= !empty($errors[$id]) ? 'border-red-500' : 'border-gray-300 dark:border-gray-600' ?> text-base text-gray-900 dark:text-white focus:outline-none focus:ring-0 focus:border-indigo-600 dark:focus:border-indigo-500" />
                     <label for="<?= $id ?>"
                         class="absolute top-4 left-0 text-base text-gray-500 dark:text-gray-400 origin-left transition-all duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 -translate-y-7 scale-75 peer-focus:-translate-y-7 peer-focus:scale-75 peer-focus:text-indigo-600 dark:peer-focus:text-indigo-500">
