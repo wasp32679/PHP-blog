@@ -22,17 +22,17 @@
             <div>
                 <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-gray-300">Post Title</label>
                 <input type="text" name="title"
-                    class="w-full px-4 py-3 rounded-xl border <?= !empty($errors['title']) ? 'border-red-500' : 'border-gray-200 dark:border-gray-600' ?> focus:ring-4 focus:ring-indigo-50/50 focus:border-indigo-500 outline-none dark:text-white dark:focus:ring-indigo-500/30 dark:focus:border-indigo-500"
+                    class="w-full px-4 py-3 rounded-xl border <?= !empty($errors['text']) ? 'border-red-500' : 'border-gray-200 dark:border-gray-600' ?> focus:ring-4 focus:ring-indigo-50/50 focus:border-indigo-500 outline-none dark:text-white dark:focus:ring-indigo-500/30 dark:focus:border-indigo-500"
                     value="<?= htmlspecialchars($_POST['title'] ?? $post->title) ?>">
-                <?php if (!empty($errors['title'])): ?>
-                    <p class="mt-1 text-sm text-red-400"><?= htmlspecialchars($errors['title']) ?></p>
+                <?php if (!empty($errors['text'])): ?>
+                    <p class="mt-1 text-sm text-red-400"><?= htmlspecialchars($errors['text']) ?></p>
                 <?php endif; ?>
             </div>
 
             <div>
                 <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-gray-300">Content</label>
                 <textarea name="content" rows="10"
-                    class="w-full px-4 py-3 rounded-xl border <?= !empty($errors['title']) ? 'border-red-500' : 'border-gray-200 dark:border-gray-600' ?> focus:ring-4 focus:ring-indigo-50/50 focus:border-indigo-500 outline-none dark:text-white dark:focus:ring-indigo-500/30 dark:focus:border-indigo-500 wrap-break-word"><?= htmlspecialchars($_POST['content'] ?? $post->content) ?></textarea>
+                    class="w-full px-4 py-3 rounded-xl border <?= !empty($errors['text']) ? 'border-red-500' : 'border-gray-200 dark:border-gray-600' ?> focus:ring-4 focus:ring-indigo-50/50 focus:border-indigo-500 outline-none dark:text-white dark:focus:ring-indigo-500/30 dark:focus:border-indigo-500 wrap-break-word"><?= htmlspecialchars($_POST['content'] ?? $post->content) ?></textarea>
             </div>
 
             <div>

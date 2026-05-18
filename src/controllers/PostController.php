@@ -36,8 +36,8 @@ class PostController
 
     public static function create(): void
     {
-        $title = filter_var($_POST['title'] ?? '');
-        $content = filter_var($_POST['content'] ?? '');
+        $title = trim($_POST['title'] ?? '');
+        $content = trim($_POST['content'] ?? '');
         $file    = $_FILES['image'] ?? null;
         $errors = [];
 
@@ -105,7 +105,12 @@ class PostController
         $errors = [];
 
         if (empty($title) || empty($content)) {
-            $errors['title'] = "Title and content are required.";
+            $errors['text'] = "Title and content are required.";
+        }
+
+        if (!empty($errors)) {
+            self::showEditForm($id, $errors);
+            return;
         }
 
         $file    = $_FILES['image'] ?? null;
@@ -118,11 +123,6 @@ class PostController
             }
         } else {
             $imagePath = $post->image;
-        }
-
-        if (!empty($errors)) {
-            self::showEditForm($id, $errors);
-            return;
         }
 
         PostModel::editPost($title, $imagePath, $content, $id);

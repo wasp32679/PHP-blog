@@ -12,7 +12,7 @@ class UserModel
      * @param string $hash
      * @return void
      */
-    public static function createUser(string $name, string $email, string $hash)
+    public static function createUser(string $name, string $email, string $hash): void
     {
         $pdo = Database::getConnexion();
         $stmt = $pdo->prepare("insert into users (name, email, password) values (?, ?, ?)");
