@@ -1,5 +1,5 @@
 <nav class="bg-gray-900 p-4 mt-0 w-full">
-    <div class="container flex mx-auto items-center">
+    <div class="flex w-full px-5 items-center justify-between">
         <div class="flex text-white font-extrabold">
             <a class="flex items-center text-white text-base no-underline hover:text-white hover:no-underline">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -28,10 +28,10 @@
             </ul>
         </div>
         <div class="flex items-center gap-3 ml-auto">
-            <a href="/login" class="px-4 py-2 text-sm font-medium text-white rounded-lg hover:bg-indigo-500 transition-colors duration-200">
+            <a href="/login" class="px-4 py-2 text-sm font-medium text-white rounded-lg hover:bg-gray-700 transition-colors duration-200">
                 Sign in
             </a>
-            <a href="/register" class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-200">
+            <a href="/register" class="px-4 py-2 text-sm font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-200">
                 Sign up
             </a>
         </div>
