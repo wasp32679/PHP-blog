@@ -92,6 +92,7 @@ class UserController
             return;
         }
 
+        session_regenerate_id(true);
         $_SESSION["user"] = [
             'id' => $user->id,
             'username' => $user->name
