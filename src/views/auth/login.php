@@ -22,7 +22,7 @@
             <form class="space-y-4 md:space-y-6" method="POST" action="/login">
                 <div class="relative z-0 w-full mb-12 group">
                     <input type="email" name="email" id="email" class="block py-4 px-0 w-full text-base text-gray-900 dark:text-white bg-transparent border-0 border-b-2 <?= !empty($errors) ? "border-red-500" : "border-gray-300 dark:border-gray-600" ?> appearance-none focus:outline-none focus:ring-0 focus:border-indigo-600 dark:focus:border-indigo-500 peer" placeholder=" " required />
-                    <label for="floating_email" class="absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-7 scale-75 top-4 -z-10 origin-left peer-focus:inset-0 peer-focus:text-indigo-600 dark:peer-focus:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email address</label>
+                    <label for="email" class="absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-7 scale-75 top-4 -z-10 origin-left peer-focus:inset-0 peer-focus:text-indigo-600 dark:peer-focus:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email address</label>
                 </div>
 
                 <div class="relative z-0 w-full pb-10 mb-12 group">
@@ -38,6 +38,5 @@
                 </button>
             </form>
         </div>
-    </div>
     </div>
 </section>
