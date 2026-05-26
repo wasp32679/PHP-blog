@@ -7,7 +7,7 @@
 
 <div class="min-h-screen flex flex-col items-start md:items-center justify-center md:p-8">
 
-    <div class="w-full md:max-w-6xl bg-white md:bg-white dark:bg-gray-900 dark:md:bg-gray-900 md:rounded-2xl md:border md:border-gray-200 dark:md:border-gray-700 md:shadow-lg">
+    <div class="w-full md:max-w-6xl bg-white dark:bg-gray-900 md:rounded-2xl md:border md:border-gray-200 dark:md:border-gray-700 md:shadow-lg">
 
         <form method="POST" action="/posts/create" enctype="multipart/form-data">
             <div class="space-y-12 p-5 m-4">

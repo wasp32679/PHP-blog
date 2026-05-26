@@ -1,7 +1,7 @@
 <nav class="bg-white dark:bg-gray-900 p-4 mt-0 w-full">
     <div class="flex w-full px-5 items-center justify-between">
         <div class="flex text-gray-900 dark:text-white font-extrabold">
-            <a class="flex items-center text-gray-900 dark:text-white text-base no-underline hover:text-gray-900 dark:hover:text-white hover:no-underline">
+            <a class="flex items-center text-base no-underline hover:no-underline">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2 L8 13 Q8 17 12 18 Q16 17 16 13 Z" opacity="0.9" />
                     <line x1="12" y1="9" x2="12" y2="17" stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none" />
@@ -15,10 +15,10 @@
         <div class="flex pl-4 text-sm">
             <ul class="list-reset flex flex-1 md:flex-none items-center">
                 <li class="mr-2">
-                    <a class="inline-block py-2 px-2 text-gray-700 dark:text-white no-underline" href="/">HOME</a>
+                    <a class="inline-block text-gray-900 dark:text-gray-100 no-underline hover:text-indigo-600 dark:hover:text-indigo-200 py-2 px-2" href="/">HOME</a>
                 </li>
                 <li class="mr-2">
-                    <a class="inline-block text-indigo-600 dark:text-indigo-200 no-underline hover:text-gray-900 dark:hover:text-gray-100 hover:text-underline py-2 px-2" href="/posts/create">Create post</a>
+                    <a class="inline-block text-gray-900 dark:text-gray-100 no-underline hover:text-indigo-600 dark:hover:text-indigo-200 py-2 px-2" href="/posts/create">Create post</a>
                 </li>
             </ul>
         </div>
