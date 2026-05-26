@@ -7,7 +7,7 @@
 
 <div class="min-h-screen flex flex-col items-start md:items-center justify-center md:p-8">
 
-    <div class="w-full md:max-w-6xl md:bg-gray-900 md:rounded-2xl md:border md:border-gray-700 md:shadow-lg">
+    <div class="w-full md:max-w-6xl bg-white md:bg-white dark:bg-gray-900 dark:md:bg-gray-900 md:rounded-2xl md:border md:border-gray-200 dark:md:border-gray-700 md:shadow-lg">
 
         <form method="POST" action="/posts/create" enctype="multipart/form-data">
             <div class="space-y-12 p-5 m-4">
@@ -23,7 +23,7 @@
                     <div class="sm:col-span-full">
                         <label for="title" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Title</label>
                         <div class="mt-2">
-                            <div class="flex items-center rounded-md bg-gray-50 dark:bg-gray-900 pl-3 outline-1 -outline-offset-1 <?= !empty($errors['text']) ? 'outline-red-500' : 'outline-gray-300 dark:outline-gray-600' ?> focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+                            <div class="flex items-center rounded-md bg-white dark:bg-gray-900 pl-3 outline-1 -outline-offset-1 <?= !empty($errors['text']) ? 'outline-red-500' : 'outline-gray-300 dark:outline-gray-600' ?> focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                 <input type="text" name="title" id="title"
                                     value="<?= htmlspecialchars($_POST['title'] ?? '') ?>"
                                     class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 dark:text-white bg-transparent placeholder:text-gray-400 dark:placeholder-gray-400 focus:outline-none sm:text-sm/6"
@@ -36,7 +36,7 @@
                         <label for="content" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Content</label>
                         <div class="mt-2">
                             <textarea name="content" id="content" rows="12"
-                                class="block w-full rounded-md bg-gray-50 border <?= !empty($errors['text']) ? 'border-red-500' : 'border-gray-300 dark:border-gray-600' ?> text-gray-900 dark:bg-gray-900 dark:placeholder-gray-400 dark:text-white px-3 py-1.5 text-base focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                class="block w-full rounded-md bg-white border <?= !empty($errors['text']) ? 'border-red-500' : 'border-gray-300 dark:border-gray-600' ?> text-gray-900 dark:bg-gray-900 dark:placeholder-gray-400 dark:text-white px-3 py-1.5 text-base focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
                                 placeholder="Write your post content here..."><?= htmlspecialchars($_POST['content'] ?? '') ?></textarea>
                         </div>
                         <?php if (!empty($errors['text'])): ?>

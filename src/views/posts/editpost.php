@@ -49,10 +49,10 @@
             </div>
 
             <div class="flex gap-4">
-                <a href="/posts/<?= $post->id ?>" class="w-1/3 text-center bg-gray-50 text-gray-500 font-bold py-4 rounded-xl hover:bg-gray-100 transition-all dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700">
+                <a href="/posts/<?= $post->id ?>" class="w-1/2 text-center bg-gray-50 text-gray-500 font-bold py-4 rounded-xl hover:bg-gray-100 transition-all dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700">
                     Cancel
                 </a>
-                <button type="submit" class="w-2/3 bg-indigo-600 text-white font-bold py-4 rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition-all dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:shadow-indigo-900/30">
+                <button type="submit" class="w-1/2 bg-indigo-600 text-white font-bold py-4 rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition-all dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:shadow-indigo-900/30">
                     Update Post
                 </button>
             </div>
