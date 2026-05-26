@@ -29,8 +29,8 @@ use Ryan\PhpBlog\helpers\Auth;
             </ul>
         </div>
         <div class="flex items-center gap-3 ml-auto">
-            <?php if (Auth::isAuthenticated()): ?>
-                <p><?= htmlspecialchars(Auth::user()['username']) ?></p>
+            <?php if ($user = Auth::user()): ?>
+                <p><?= htmlspecialchars($user['username']) ?></p>
                 <a href="/logout" class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
                     Sign out
                 </a>
