@@ -1,3 +1,9 @@
+<?php
+
+use Ryan\PhpBlog\helpers\Auth;
+
+?>
+
 <nav class="bg-white dark:bg-gray-900 p-4 mt-0 w-full">
     <div class="flex w-full px-5 items-center justify-between">
         <div class="flex text-gray-900 dark:text-white font-extrabold">
@@ -23,12 +29,19 @@
             </ul>
         </div>
         <div class="flex items-center gap-3 ml-auto">
-            <a href="/login" class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
-                Sign in
-            </a>
-            <a href="/register" class="px-4 py-2 text-sm font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-200">
-                Sign up
-            </a>
+            <?php if (Auth::isAuthenticated()): ?>
+                <p><?= htmlspecialchars(Auth::user()['username']) ?></p>
+                <a href="/logout" class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
+                    Sign out
+                </a>
+            <?php else: ?>
+                <a href="/login" class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
+                    Sign in
+                </a>
+                <a href="/register" class="px-4 py-2 text-sm font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors duration-200">
+                    Sign up
+                </a>
+            <?php endif; ?>
         </div>
     </div>
 </nav>

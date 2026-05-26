@@ -40,5 +40,7 @@ if ($uri === '/posts/create' && $method === 'GET') {
 } elseif ($uri === '/login' && $method === 'GET') {
     UserController::showLoginForm();
 } elseif ($uri === '/login' && $method === 'POST') {
-    UserController::LoginUser();
+    UserController::login();
+} elseif ($uri === '/logout' && $method === 'GET') {
+    UserController::logout();
 }

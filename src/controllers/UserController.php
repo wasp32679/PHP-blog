@@ -76,7 +76,7 @@ class UserController
         require ROOT . '/src/views/auth/login.php';
     }
 
-    public static function LoginUser(): void
+    public static function login(): void
     {
         $email    = trim($_POST['email'] ?? '');
         $password = $_POST['password'] ?? '';
@@ -96,6 +96,14 @@ class UserController
             'id' => $user->id,
             'username' => $user->name
         ];
+        header("Location: /");
+        exit;
+    }
+
+    public static function logout(): void
+    {
+        session_destroy();
+        setcookie(session_name(), "", time() - 3600);
         header("Location: /");
         exit;
     }
