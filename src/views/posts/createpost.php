@@ -68,8 +68,7 @@
                 </div>
 
                 <div class="mt-6 mx-4 flex items-center justify-end gap-x-6 p-5">
-                    <button type="button" class="w-24 text-sm/6 font-semibold text-gray-900 dark:text-white">Cancel</button>
-                    <button type="submit" class="w-24 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create</button>
+                    <button type="submit" class="w-36 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create</button>
                 </div>
             </div>
         </form>
