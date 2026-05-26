@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once __DIR__ . "/../vendor/autoload.php";
 
 ini_set('display_errors', 1);
@@ -8,7 +10,6 @@ error_reporting(E_ALL);
 use Ryan\PhpBlog\config\Database;
 use Ryan\PhpBlog\controllers\PostController;
 use Ryan\PhpBlog\controllers\UserController;
-
 
 define('ROOT', dirname(__DIR__));
 
@@ -36,4 +37,8 @@ if ($uri === '/posts/create' && $method === 'GET') {
     UserController::showRegisterForm();
 } elseif ($uri === '/register' && $method === 'POST') {
     UserController::createUser();
+} elseif ($uri === '/login' && $method === 'GET') {
+    UserController::showLoginForm();
+} elseif ($uri === '/login' && $method === 'POST') {
+    UserController::LoginUser();
 }
