@@ -1,5 +1,11 @@
 <?php
 
+session_start([
+    'cookie_httponly' => true,
+    'cookie_secure' => isset($_SERVER['HTTPS']),
+    'cookie_samesite' => 'Lax',
+]);
+
 require_once __DIR__ . "/../vendor/autoload.php";
 
 ini_set('display_errors', 1);
@@ -8,7 +14,6 @@ error_reporting(E_ALL);
 use Ryan\PhpBlog\config\Database;
 use Ryan\PhpBlog\controllers\PostController;
 use Ryan\PhpBlog\controllers\UserController;
-
 
 define('ROOT', dirname(__DIR__));
 
@@ -36,4 +41,10 @@ if ($uri === '/posts/create' && $method === 'GET') {
     UserController::showRegisterForm();
 } elseif ($uri === '/register' && $method === 'POST') {
     UserController::createUser();
+} elseif ($uri === '/login' && $method === 'GET') {
+    UserController::showLoginForm();
+} elseif ($uri === '/login' && $method === 'POST') {
+    UserController::login();
+} elseif ($uri === '/logout' && $method === 'GET') {
+    UserController::logout();
 }

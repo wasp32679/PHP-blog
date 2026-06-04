@@ -70,4 +70,54 @@ class UserController
             self::showRegisterForm($errors, $name, $email);
         }
     }
+
+    public static function showLoginForm(string $errors = ''): void
+    {
+        require ROOT . '/src/views/auth/login.php';
+    }
+
+    public static function login(): void
+    {
+        $email    = trim($_POST['email'] ?? '');
+        $password = $_POST['password'] ?? '';
+        $user = UserModel::findByEmail($email);
+        $errors   = '';
+
+        if ($user === null || !password_verify($password, $user->password)) {
+            $errors = "Invalid email or password.";
+        }
+
+        if (!empty($errors)) {
+            self::showLoginForm($errors);
+            return;
+        }
+
+        session_regenerate_id(true);
+        $_SESSION["user"] = [
+            'id' => $user->id,
+            'username' => $user->name
+        ];
+        header("Location: /");
+        exit;
+    }
+
+    public static function logout(): void
+    {
+        $_SESSION = [];
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(
+                session_name(),
+                '',
+                time() - 42000,
+                $params["path"],
+                $params["domain"],
+                $params["secure"],
+                $params["httponly"]
+            );
+        }
+        session_destroy();
+        header("Location: /");
+        exit;
+    }
 }

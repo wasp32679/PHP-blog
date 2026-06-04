@@ -1,4 +1,6 @@
 <?php require_once ROOT . "/src/views/shared/header.php"; ?>
+<?php require_once ROOT . "/src/views/shared/navbar.php"; ?>
+
 
 <?php
 /** @var array $errors
@@ -48,7 +50,7 @@
             </button>
 
             <p class="text-center text-sm text-gray-500 dark:text-gray-400">
-                Already have an account? <a href="#" class="font-medium text-indigo-600 hover:underline dark:text-indigo-500">Login here</a>
+                Already have an account? <a href="/login" class="font-medium text-indigo-600 hover:underline dark:text-indigo-500">Login here</a>
             </p>
 
         </form>
