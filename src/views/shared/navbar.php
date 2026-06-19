@@ -23,9 +23,11 @@ use Ryan\PhpBlog\helpers\Auth;
                 <li class="mr-2">
                     <a class="inline-block text-gray-900 dark:text-gray-100 no-underline hover:text-indigo-600 dark:hover:text-indigo-200 py-2 px-2" href="/">HOME</a>
                 </li>
+                <?php if ($user = Auth::user()): ?>
                 <li class="mr-2">
                     <a class="inline-block text-gray-900 dark:text-gray-100 no-underline hover:text-indigo-600 dark:hover:text-indigo-200 py-2 px-2" href="/posts/create">Create post</a>
                 </li>
+                <?php endif; ?>
             </ul>
         </div>
         <div class="flex items-center gap-3 ml-auto">

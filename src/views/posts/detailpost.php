@@ -1,17 +1,22 @@
-<?php require_once ROOT . "/src/views/shared/header.php"; ?>
+<?php use Ryan\PhpBlog\models\Post;
+
+require_once ROOT . "/src/views/shared/header.php"; ?>
 <?php require_once ROOT . "/src/views/shared/navbar.php"; ?>
 
 <?php
-/** @var \Ryan\PhpBlog\models\Post $post */
+/** @var Post $post */
+use Ryan\PhpBlog\helpers\Auth;
 ?>
 
 <!--Title-->
 <div class="text-center pt-16 md:pt-32">
+    <?php if ($post->user_id === Auth::user()['id']): ?>
     <div class="absolute top-22 right-9">
         <a href="/posts/edit/<?= $post->id ?>" class="px-6.75 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-colors">
             Edit
         </a>
     </div>
+    <?php endif; ?>
     <p class="text-sm md:text-base text-indigo-500 font-bold"><?= date('d F Y', strtotime($post->created_at)) ?>
     </p>
     <h1 class="text-gray-900 dark:text-white font-bold break-normal text-3xl md:text-5xl"><?= htmlspecialchars($post->title, ENT_QUOTES, 'UTF-8') ?></h1>
