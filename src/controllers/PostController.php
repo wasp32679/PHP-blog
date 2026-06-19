@@ -45,7 +45,7 @@ class PostController
 
         if ($user_id === 0) {
             header("Location: /login");
-
+            exit;
         }
 
         if (empty($title) || empty($content)) {
@@ -97,7 +97,7 @@ class PostController
             require ROOT . '/src/views/err404.php';
             exit;
         }
-        if ($post->user_id !== Auth::user()['id']) {
+        if ($post->user_id !== Auth::user()['id'] ?? null) {
             require ROOT . '/src/views/err403.php';
             exit;
         }
@@ -109,6 +109,10 @@ class PostController
         $post = PostModel::getPostById($id);
         if ($post === null) {
             require ROOT . '/src/views/err404.php';
+            exit;
+        }
+        if ($post->user_id !== Auth::user()['id'] ?? null) {
+            require ROOT . '/src/views/err403.php';
             exit;
         }
         $title = trim($_POST['title'] ?? $post->title);
