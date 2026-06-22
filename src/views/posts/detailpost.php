@@ -10,7 +10,7 @@ use Ryan\PhpBlog\helpers\Auth;
 
 <!--Title-->
 <div class="text-center pt-16 md:pt-32">
-    <?php if ($post->user_id === Auth::user()['id']): ?>
+    <?php if (Auth::user() !== null && $post->user_id === Auth::user()['id']): ?>
     <div class="absolute top-22 right-9">
         <a href="/posts/edit/<?= $post->id ?>" class="px-6.75 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-colors">
             Edit
