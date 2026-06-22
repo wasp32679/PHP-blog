@@ -3,6 +3,7 @@
 namespace Ryan\PhpBlog\controllers;
 
 use Ryan\PhpBlog\models\PostModel;
+use Ryan\PhpBlog\helpers\Auth;
 
 class PostController
 {
@@ -39,7 +40,13 @@ class PostController
         $title = trim($_POST['title'] ?? '');
         $content = trim($_POST['content'] ?? '');
         $file    = $_FILES['image'] ?? null;
+        $user_id = Auth::user()['id'] ?? 0;
         $errors = [];
+
+        if ($user_id === 0) {
+            header("Location: /login");
+            exit;
+        }
 
         if (empty($title) || empty($content)) {
             $errors['text'] = "Title and content are required.";
@@ -61,7 +68,7 @@ class PostController
             return;
         }
 
-        $postId = PostModel::createPost($title, $imagePath, $content);
+        $postId = PostModel::createPost($title, $imagePath, $content, $user_id);
         header("Location: /posts/$postId");
         exit;
     }
@@ -90,6 +97,10 @@ class PostController
             require ROOT . '/src/views/err404.php';
             exit;
         }
+        if ($post->user_id !== Auth::user()['id'] ?? null) {
+            require ROOT . '/src/views/err403.php';
+            exit;
+        }
         require ROOT . '/src/views/posts/editpost.php';
     }
 
@@ -98,6 +109,10 @@ class PostController
         $post = PostModel::getPostById($id);
         if ($post === null) {
             require ROOT . '/src/views/err404.php';
+            exit;
+        }
+        if ($post->user_id !== Auth::user()['id'] ?? null) {
+            require ROOT . '/src/views/err403.php';
             exit;
         }
         $title = trim($_POST['title'] ?? $post->title);
